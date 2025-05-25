@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagu Favorit</title>
+</head>
+<link rel="stylesheet" href="Lagu.css">
+<body>
+    <div class="head">
+        <img src="Profil.jpeg" alt="" srcset="" style="display: flex; height: 230px; box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.5);">
+        <div class="headtengah" style="display: flex; flex-direction: column; color: white; width: 100%; height: auto; padding-top: 20px; padding-bottom: 20px;">
+            <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; display: flex; padding-top: 54px; font-size: smaller; margin: 0;">Tugas</h1>
+            <h5 style="font-size: 80px; margin: 0; padding-bottom: 30px;">Playlist Lagu</h5>
+            <h3 style="font-size: 20px; margin: 0;">Hafidin-10</h3>
+        </div>
+        <div class="headkanan" style="display: flex; justify-content: center; height: 100%; align-items: center;">
+            <img src="Spotify_Primary_Logo_RGB_Green.png" alt="" srcset="" style="display: flex; height: 200px;">
+        </div>
+    </div>
+
+    <div id="container"></div>
+    <script>
+        const audios = document.querySelectorAll("audio");
+
+        audios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                audios.forEach(a => {
+                    if (a !== audio) {
+                        a.pause();
+                        a.currentTime = 0; // reset durasi ke awal
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="lagu.js"></script>
+</body>
+</html>

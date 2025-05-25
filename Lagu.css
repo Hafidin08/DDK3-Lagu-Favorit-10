@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* justify-content: space-between; */
+    gap:10px;
+    background-color: rgb(22, 22, 99);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
+}
+
+.lagu{
+    border-radius: 10px;
+    border:1px solid rgb(255, 255, 255);
+    width: 25%;
+    padding:15px;
+    margin: 20px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+
+}
+.lagu h2{
+    margin:0;
+    display: flex;
+    justify-content: center;
+}
+.lagu small{
+    margin:0;
+    display: flex;
+    justify-content: center;
+}
+.lagu img{
+width: 50%;
+margin: 0;
+border-radius: 5px;
+display: flex;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 0;
+justify-content: center;
+}
+
+.bawah{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 300px;
+    padding: 22px;
+    background: linear-gradient(to bottom, rgb(56, 56, 255), rgb(23, 23, 121));
+    gap: 3rem;
+}
+#audio-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #ffffff;
+    display: hidden;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #d1d1d1;
+    display: hidden;
+    border-radius: 20px;
+    margin: 10px;
+    margin-left: 20px;
+}
